@@ -4,6 +4,9 @@ scss_files: "app/**/*.scss"
 
 linters:
 
+  UnnecessaryParentReference:
+    enabled: false
+
   BorderZero:
     enabled: true
     convention: none
