@@ -1,6 +1,6 @@
 /*jshint node:true*/
 
-var stringUtil = require('ember-cli/lib/utilities/string');
+var kebabCase = require('lodash/kebabCase');
 var pkg = require('./package');
 
 module.exports = {
@@ -9,10 +9,11 @@ module.exports = {
   locals: function(options) {
     var entity    = options.entity;
     var rawName   = entity.name;
-    var name      = stringUtil.dasherize(rawName);
-    var namespace = stringUtil.classify(rawName);
+    var name      = kebabCase(rawName);
+    var namespace = capitalize(camelCase(rawName));
 
     return {
+			Name: capitalize(name)
       name: name,
       modulePrefix: name,
       namespace: namespace

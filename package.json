@@ -11,6 +11,7 @@
   },
   "homepage": "https://github.com/davewasmer/ember-blueprint",
   "dependencies": {
-    "ember-cli": "^2.4.3"
+    "ember-cli": "^2.4.3",
+    "lodash": "^4.7.0"
   }
 }
