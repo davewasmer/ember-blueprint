@@ -1,6 +1,8 @@
 /*jshint node:true*/
 
 var kebabCase = require('lodash/kebabCase');
+var upperFirst = require('lodash/upperFirst');
+var camelCase = require('lodash/camelCase');
 var pkg = require('./package');
 
 module.exports = {
@@ -10,10 +12,10 @@ module.exports = {
     var entity    = options.entity;
     var rawName   = entity.name;
     var name      = kebabCase(rawName);
-    var namespace = capitalize(camelCase(rawName));
+    var namespace = upperFirst(camelCase(rawName));
 
     return {
-			Name: capitalize(name)
+      Name: upperFirst(name),
       name: name,
       modulePrefix: name,
       namespace: namespace
