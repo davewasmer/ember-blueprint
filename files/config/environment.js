@@ -8,7 +8,11 @@ module.exports = function(environment) {
     baseURL: '/',
     locationType: 'auto',
     EmberENV: { FEATURES: {} },
-    APP: {}
+    APP: {},
+
+    api: {
+      host: process.env.API_HOST || 'http://localhost:3000'
+    }
   };
 
   if (environment === 'development') {
@@ -30,7 +34,6 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
   }
 
   return ENV;
